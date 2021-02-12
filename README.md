@@ -1,6 +1,6 @@
 # Change-data-capture-demo
 
-##Introduction
+## Introduction
 This demo application will help you in implementing CDC changes and enable you to move towards Event driven architecture.
 
 ![Design](./images/design.png)
@@ -97,15 +97,15 @@ services:
     depends_on:
       - elasticsearch
 
-  campaign-service:
+  campaign-learning.personal.cdc.demo.service:
     build:
-      context: campaign-service/
+      context: campaign-learning.personal.cdc.demo.service/
     ports:
     - 8080:8080
 
-  customer-service:
+  customer-learning.personal.cdc.demo.service:
     build:
-      context: customer-service/
+      context: customer-learning.personal.cdc.demo.service/
     ports:
     - 9090:9090
 

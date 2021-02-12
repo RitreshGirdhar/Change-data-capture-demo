@@ -108,7 +108,7 @@ When using commands, make sure you review the "Variable Substitution" section in
 
 If ```KAFKA_ADVERTISED_HOST_NAME``` is specified, it takes precedence over ```HOSTNAME_COMMAND```
 
-For AWS deployment, you can use the Metadata service to get the container host's IP:
+For AWS deployment, you can use the Metadata learning.personal.cdc.demo.service to get the container host's IP:
 ```
 HOSTNAME_COMMAND=wget -t3 -T2 -qO-  http://169.254.169.254/latest/meta-data/local-ipv4
 ```
@@ -176,14 +176,14 @@ You can configure the broker rack affinity in different ways
 1. explicitly, using ```KAFKA_BROKER_RACK```
 2. via a command, using ```RACK_COMMAND```, e.g. ```RACK_COMMAND: "curl http://169.254.169.254/latest/meta-data/placement/availability-zone"```
 
-In the above example the AWS metadata service is used to put the instance's availability zone in the ```broker.rack``` property.
+In the above example the AWS metadata learning.personal.cdc.demo.service is used to put the instance's availability zone in the ```broker.rack``` property.
 
 ## JMX
 
 For monitoring purposes you may wish to configure JMX. Additional to the standard JMX parameters, problems could arise from the underlying RMI protocol used to connect
 
 * java.rmi.server.hostname - interface to bind listening port
-* com.sun.management.jmxremote.rmi.port - The port to service RMI requests
+* com.sun.management.jmxremote.rmi.port - The port to learning.personal.cdc.demo.service RMI requests
 
 For example, to connect to a kafka running locally (assumes exposing port 1099)
 
