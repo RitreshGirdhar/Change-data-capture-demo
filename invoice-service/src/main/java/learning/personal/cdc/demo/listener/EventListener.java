@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 	@KafkaListener(id = "myId", topics = "dbserver1.inventory.customers")
 	public void listen(String in) {
+		//TODO Convert json to object and update Mysql Database
 		System.out.println(in);
 	}
 
