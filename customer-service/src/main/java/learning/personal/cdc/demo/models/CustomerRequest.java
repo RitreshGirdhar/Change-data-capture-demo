@@ -7,10 +7,10 @@ import lombok.*;
 @Data
 @Builder
 @NonNull
+@Setter
+@Getter
 public class CustomerRequest {
 
-	private  String name;
-	private  String address;
 	private  String firstName;
 	private  String lastName;
 	private  String email;

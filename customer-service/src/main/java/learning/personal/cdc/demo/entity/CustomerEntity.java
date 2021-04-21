@@ -1,25 +1,26 @@
 package learning.personal.cdc.demo.entity;
 
 import lombok.*;
-import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "customer2")
+@Table(name = "customers")
 public class CustomerEntity {
 
-    private  String name;
-    private  String address;
-    private  String firstName;
-    private  String lastName;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "first_name")
+    private  String firstName;
+
+    @Column(name = "last_name")
+    private  String lastName;
+
     private  String email;
-//    private  String id;
 }

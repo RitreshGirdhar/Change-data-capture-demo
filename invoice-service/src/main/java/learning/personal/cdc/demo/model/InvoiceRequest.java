@@ -5,12 +5,11 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Builder
-@Data
 @AllArgsConstructor
-@NoArgsConstructor
-public class InvoiceResponse {
+@Getter
+@Setter
+public class InvoiceRequest {
 
-	private Long invoiceId;
 	private Double amount;
 	private Double totalAmount;
 	private Long billId;

@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 
 	@KafkaListener(id = "myId", topics = "dbserver1.inventory.customers")
 	public void listen(String in) {
-
-
 		System.out.println(in);
 	}
 

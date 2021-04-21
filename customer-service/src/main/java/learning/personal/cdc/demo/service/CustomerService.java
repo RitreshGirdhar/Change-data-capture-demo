@@ -7,6 +7,7 @@ import learning.personal.cdc.demo.models.CustomerResponse;
 import learning.personal.cdc.demo.transformer.CustomerDaoTransformer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.Optional;
 
 @Service public class CustomerService {
@@ -26,10 +27,9 @@ import java.util.Optional;
 	public void saveCustomer(CustomerRequest customerRequest) {
 		customerRepository
 				.save(CustomerEntity.builder()
-						.name(customerRequest.getName())
+//						.id(Math.round(Math.random()))
 						.firstName(customerRequest.getFirstName())
 						.lastName(customerRequest.getLastName())
-						.address(customerRequest.getAddress())
 						.email(customerRequest.getEmail())
 						.build());
 	}

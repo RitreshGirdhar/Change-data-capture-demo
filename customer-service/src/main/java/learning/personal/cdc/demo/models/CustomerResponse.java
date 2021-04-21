@@ -1,14 +1,14 @@
 package learning.personal.cdc.demo.models;
 
 import lombok.*;
+
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 @Builder
-@NonNull
+@Getter
+@Setter
 public class CustomerResponse {
+    private Long id;
+    private String firstName;
 
-    private  String name;
-    private  String address;
-    private  String id;
 }
