@@ -11,7 +11,7 @@ public class CustomerDaoTransformer extends Transformer<CustomerEntity, Customer
     public CustomerResponse transform(CustomerEntity customerEntity) {
         return CustomerResponse.builder()
                 .address(customerEntity.getAddress())
-                .id(customerEntity.getId())
+                .id(customerEntity.getEmail())
                 .name(customerEntity.getName())
                 .build();
     }

@@ -12,14 +12,15 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "customer2")
+@Table(name = "customer")
 public class CustomerEntity {
 
     private  String name;
     private  String address;
     private  String firstName;
     private  String lastName;
+
     @Id
     private  String email;
-//    private  String id;
+
 }

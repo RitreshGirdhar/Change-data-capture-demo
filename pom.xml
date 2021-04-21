@@ -11,7 +11,7 @@
 
     <modules>
         <module>customer-service</module>
-        <module>campaign-service</module>
+        <module>invoice-service</module>
     </modules>
 
     <dependencies>
